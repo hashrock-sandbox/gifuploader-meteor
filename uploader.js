@@ -4,9 +4,6 @@ Images = new FS.Collection("images", {
 });
 if (Meteor.isClient) {
   Template.main.helpers({
-    counter: function () {
-      return Session.get('counter');
-    },
     images: function () {
       return Images.find({}, {sort: {uploadedAt: -1}});
     }

@@ -1,0 +1,25 @@
+<head>
+  <title>uploader</title>
+</head>
+
+<body>
+  {{> main}}
+</body>
+
+<template name="image">
+  <div>
+    <img src="{{this.url}}" alt="">
+    <button class="removeImage">x</button>
+  </div>
+</template>
+
+<template name="main">
+  <input type="file" name="" class="myFileInput">
+  
+  {{#each images}}
+  <p>
+    {{> image}}
+  </p>
+  {{/each}}
+
+</template>
